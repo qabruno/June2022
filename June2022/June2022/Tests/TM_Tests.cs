@@ -1,23 +1,47 @@
-﻿
-// open chrome browser
-IWebDriver driver = new ChromeDriver();
+﻿using June2022.Utilities;
+using NUnit.Framework;
 
-// Login page object initialization and definition
-LoginPage loginPageObj = new LoginPage();
-loginPageObj.LoginActions(driver);
+namespace June2022.Tests
+{
+    [TestFixture]
+    public class TM_Tests : CommonDriver
+    {
+        [SetUp]
+        public void LoginSteps()
+        {
+            driver = new ChromeDriver();
+            LoginPage loginPageObj = new LoginPage();
+            loginPageObj.LoginActions(driver);
 
-// Home page object initialization and definition
-HomePage homePageObj = new HomePage();
-homePageObj.GoToTMPage(driver);
+            HomePage homePageObj = new HomePage();
+            homePageObj.GoToTMPage(driver);
+        }
 
-// TM page object initialization and definition
-TMPage tmPageObj = new TMPage();
-tmPageObj.CreateTM(driver);
+        [Test]
+        public void CreateTmTest()
+        {
+            TMPage tmPageObj = new TMPage();
+            tmPageObj.CreateTM(driver);
+        }
 
-// Edit TM
-tmPageObj.EditTM(driver);
+        [Test]
+        public void EditTmTest()
+        {
+            TMPage tmPageObj = new TMPage();
+            tmPageObj.EditTM(driver);
+        }
 
-// Delete TM
-tmPageObj.DeleteTM(driver);
+        [Test]
+        public void DeleteTmTest()
+        {
+            TMPage tmPageObj = new TMPage();
+            tmPageObj.DeleteTM(driver);
+        }
 
+        [TearDown]
+        public void CloseTestRun()
+        {
 
+        }
+    }
+}

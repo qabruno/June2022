@@ -1,4 +1,6 @@
 ﻿
+using NUnit.Framework;
+
 namespace June2022.Pages
 {
     public class TMPage
@@ -38,14 +40,9 @@ namespace June2022.Pages
             // check if material record has been created successfully
             IWebElement newCode = driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[3]/table/tbody/tr[last()]/td[1]"));
 
-            if (newCode.Text == "June2022")
-            {
-                Console.WriteLine("New material record created successfully.");
-            }
-            else
-            {
-                Console.WriteLine("New material record hasn't been created");
-            }
+            // Assertion number 1
+            Assert.That(newCode.Text == "June2022", "Actual code and expected code do not match.");
+
         }
 
         public void EditTM(IWebDriver driver)
