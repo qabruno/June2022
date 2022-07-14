@@ -26,5 +26,10 @@ namespace June2022.Pages
             tmOption.Click();
             
         }
+
+        public void GoToEmployeePage(IWebDriver driver)
+        {
+
+        }
     }
 }
