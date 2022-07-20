@@ -24,7 +24,7 @@ namespace June2022.Tests
         {
             
             homePageObj.GoToTMPage(driver);         
-            tmPageObj.EditTM(driver);
+            tmPageObj.EditTM(driver, "asas", "wew", "tre");
         }
 
         [Test, Order(3), Description("Check if user is able to delete Material record")]

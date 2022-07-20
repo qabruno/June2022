@@ -40,5 +40,6 @@ namespace June2022.Utilities
                 wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.CssSelector(locatorValue)));
             }
         }
+
     }
 }
