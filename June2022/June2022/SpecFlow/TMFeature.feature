@@ -10,6 +10,7 @@ Scenario: create material record with valid details
 	When I navigate to time and material page
 	When I create a new material record
 	Then the record should be created successfully
+
 @yourTag
 Scenario Outline: edit existing material record with valid details
 	Given I logged into TurnUp portal successfully

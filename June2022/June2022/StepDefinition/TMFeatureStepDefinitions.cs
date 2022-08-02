@@ -12,6 +12,12 @@ namespace June2022
         HomePage homePageObj = new HomePage();
         TMPage tmPageObj = new TMPage();
 
+        [AfterTestRun]
+        public static void AfterWebFeature(IWebDriver driver)
+        {
+            driver.Quit();
+        }
+
         [Given(@"I logged into TurnUp portal successfully")]
         public void GivenILoggedIntoTurnUpPortalSuccessfully()
         {

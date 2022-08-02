@@ -131,6 +131,11 @@ namespace June2022.Pages
 
         }
 
+        public void example(IWebDriver driver)
+        {
+            IWebElement example = driver.FindElement(By.CssSelector("span[title*='2022']"));
+        }
+
         public void DeleteTM(IWebDriver driver)
         {
             Thread.Sleep(2000);

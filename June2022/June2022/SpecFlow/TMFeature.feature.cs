@@ -114,7 +114,7 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.CategoryAttribute("yourTag")]
         [NUnit.Framework.TestCaseAttribute("Keyboard", "White", "$160.00", null)]
         [NUnit.Framework.TestCaseAttribute("Bottle", "Green", "$1,555.00", null)]
-        [NUnit.Framework.TestCaseAttribute("Pen", "Blue", "$10.00", null)]
+        [NUnit.Framework.TestCaseAttribute("Pen", "Blue", "bag", null)]
         public void EditExistingMaterialRecordWithValidDetails(string code, string description, string price, string[] exampleTags)
         {
             string[] @__tags = new string[] {
@@ -129,7 +129,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("Description", description);
             argumentsOfScenario.Add("Price", price);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("edit existing material record with valid details", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 14
+#line 15
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -139,16 +139,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 15
+#line 16
  testRunner.Given("I logged into TurnUp portal successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 16
+#line 17
  testRunner.When("I navigate to time and material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 17
+#line 18
  testRunner.When(string.Format("I update \'{0}\', \'{1}\' and \'{2}\' of an existing material record", code, description, price), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 18
+#line 19
  testRunner.Then(string.Format("the record should have the \'{0}\', \'{1}\' and \'{2}\' updated", code, description, price), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
